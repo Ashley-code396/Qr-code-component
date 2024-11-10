@@ -1,0 +1,72 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(0, 0%, 100%); /* White background for the entire page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: hsl(218, 44%, 22%);
+    margin: 0;
+}
+
+/* Background for the entire container */
+.blue-background {
+    background-color: hsl(212, 45%, 89%); /* Blue background */
+    width: 90%; /* Width of the blue rectangle */
+    max-width: 800px; /* Max width */
+    height: 90%; /* Height of the blue background (2/3 of body height) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Removed border-radius to make corners sharp */
+}
+
+/* Container for the content */
+.container {
+    background-color: hsl(0, 0%, 100%); /* White background for the container */
+    width: 35%;  /* Width is set to 90% of the blue background */
+    max-width: 750px; /* Max width of the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    padding: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: hsl(218, 44%, 22%); /* Dark text color for content */
+}
+
+/* Styling for the QR code image */
+.container img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Heading styles */
+.container h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: hsl(218, 44%, 22%);
+}
+
+/* Paragraph styles */
+.container p {
+    font-size: 15px;
+    color: hsl(216, 15%, 48%);
+    line-height: 1.6;
+    padding-left: 0.4cm;  /* Add left padding to push the text inside */
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 600px;
+    }
+}
