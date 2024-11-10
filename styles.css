@@ -21,12 +21,11 @@ body {
 .blue-background {
     background-color: hsl(212, 45%, 89%); /* Blue background */
     width: 90%; /* Width of the blue rectangle */
-    max-width: 800px; /* Max width */
-    height: 90%; /* Height of the blue background (2/3 of body height) */
+    max-width: 1200px; /* Max width */
+    height: 85%; /* Height of the blue background (2/3 of body height) */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Removed border-radius to make corners sharp */
     position: relative; /* Needed for positioning the dots */
 }
 
@@ -34,7 +33,7 @@ body {
 .container {
     background-color: hsl(0, 0%, 100%); /* White background for the container */
     width: 35%;  /* Width is set to 90% of the blue background */
-    max-width: 750px; /* Max width of the container */
+    max-width: 260px; /* Max width of the container */
     border-radius: 10px; /* Rounded corners for the container */
     padding: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -69,7 +68,7 @@ body {
 /* Styling for the 12 dots (arranged in 2 columns and 6 rows) */
 .dots-container {
     position: absolute;
-    left: -240px; /* Move the container to the far left */
+    left: -60px; /* Move the container to the far left */
     top: 50%; /* Position the dots in the middle vertically */
     transform: translateY(-50%); /* Adjust for perfect centering */
     display: grid;
@@ -84,6 +83,28 @@ body {
     height: 10px;
     border-radius: 50%; /* Make the dot circular */
     background-color: hsla(203, 76%, 61%, 0.772); /* Medium gray color for the dots */
+}
+
+/* L-shaped orange element */
+.l-shape {
+    position: absolute;
+    top: -50px; /* Adjust as needed to position above the container */
+    left: 80%; /* Align in the center horizontally */
+    transform: translateX(-50%);
+    width: 10px; /* Thickness of the L shape */
+    height: 60px; /* Vertical part of the L */
+    background-color: orange;
+}
+
+/* L shape's horizontal part */
+.l-shape::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px; /* Horizontal part of the L */
+    height: 10px; /* Same thickness as the vertical part */
+    background-color: orange;
 }
 
 /* Responsive layout for larger screens */
